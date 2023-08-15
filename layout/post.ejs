@@ -1,0 +1,20 @@
+<body class="user-select-none">
+    <%- include("_partial/header.ejs") %>
+
+    <main class="glass-plate center-container">
+        <article>
+            <%- page.content %>
+        </article>
+        
+        <% if(page.tags) {%>
+        <nav class="tag">
+            标签:
+            <% page.tags.data.map(x=>x.name).forEach( (tag, i, array)=> { %>
+                <a href="/tags/<%= tag %>"><%- tag %></a>
+                <%= i!==(array.length-1) ? '|' : '' %>
+            <% }) %>
+        </nav>
+        <% } %>
+    </main>
+
+</body>

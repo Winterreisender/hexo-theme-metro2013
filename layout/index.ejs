@@ -1,0 +1,38 @@
+<body class="user-select-none">
+    <%- include("_partial/header.ejs") %>
+    
+    <main>
+
+          <% // `{title,tags: {data :tags}}` is cool but not ergonomic, just use `tags.data`  %>
+          <% site.posts.forEach(({title, path, description, tags , date}) => { // 网站 %> 
+            <% const cardType = description ? 'large' : 'small' %>
+
+              <% if(cardType=='large') {%>
+                <div class="tile-wide" data-role="tile">
+                  <div class="tile-content slide-up-2">
+
+                    <div class="slide" >
+                        <h3><a href="<%= path %>" style="color: unset;"><%- title %></a></h3>
+                    </div>
+
+                    <div class="slide-over" style="background-color: #ce352c;">
+                      <p><%- description %> </p>
+                      <% tags.each((tag) => { %>
+                        <span><%= tag.name %></span>
+                      <% }); %>
+                    </div>
+
+                  </div>   
+                </div>
+              <% } %>
+
+              <% if(cardType=='small') {%>
+                <div class="tile" data-role="tile">
+                  <h3><a href="<%= path %>" style="color: unset;"></style><%- title %></a></h3>
+                </div>
+              <% } %>
+
+            </a>
+          <% }) %>
+    </main>
+</body>

@@ -1,0 +1,41 @@
+/* --------Global--------- */
+
+/*
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@font-face {
+
+}
+*/
+/* --------Atomic CSS--------- */
+
+.no-style,
+.no-style:hover {
+  all: unset;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
+
+.inline-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.1em;
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+
+/* --------Element CSS--------- */

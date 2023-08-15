@@ -1,0 +1,15 @@
+<body class="user-select-none">
+    <%- include("_partial/header.ejs") %>
+
+    <main>
+    <% site.tags.data.forEach( tagObj => { %>
+        <h2><a href="/tags/<%- tagObj.name %>" style="color: unset" ><%- tagObj.name %></a></h2>
+        <ul>
+        <% tagObj.posts.forEach( post=> { %>
+            <li> <a href="<%= config.root %><%= post.path %>"><%- post.title %></a> </li>
+        <%  }); %>
+        </ul>
+    <% })  %>
+
+    </main>
+</body>
