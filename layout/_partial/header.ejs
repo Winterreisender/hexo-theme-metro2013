@@ -1,19 +1,18 @@
-<header class="app-bar">
-    <a class="app-bar-element" href="/"> <%- config.title %> </a>
-
-    <span class="app-bar-divider"></span>
-
-    <nav><ul class="app-bar-menu">
-      <% for(const nav of config.metro2013.nav) { %>
-        <li><a href="<%- nav.url %>"><%- nav.name %></a></li>
-      <% } %>
-    </ul></nav>
+<header class="margin20 no-margin-left user-select-none clear-float">
+    <% // 标题 %>
+    <a class="place-left fg-white" href="/" title=""><h1> <%- config.title %> </h1></a>
 
     <% // 公告或副标题 %>
-    <ul class="app-bar-menu place-right">
-    <% config.metro2013.notice.forEach(({content}) => {%>
-      <li><%- content %></li>
+    <% config.metro2013.notice.forEach( ({content}) => {%>
+        <div class="place-right"><%- content %></div>
     <% }) %>
-    </ul>
+    
+    
+    <% // 菜单 %>
+    <nav class="main-menu-wrapper place-left" style="padding-top: 1em; margin-left: 1em;"><ul class="horizontal-menu">
+        <% for(const nav of config.metro2013.nav) { %>
+          <li><a class="fg-white" href="<%- nav.url %>"><%- nav.name %></a></li>
+        <% } %>
+    </ul></nav>
 
 </header>
