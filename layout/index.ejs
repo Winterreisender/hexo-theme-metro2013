@@ -4,30 +4,24 @@
     <main>
 
       <% site.posts.forEach(({title, path, description, tags, date, metro2013}) => { // 网站 %> 
-        <% const metro2013cfg = { ...config.metro2013.page_metro2013_default, ...metro2013 } %>
-        <a href="<%= path %>" class="fg-white">
-            <div class="<%- metro2013cfg.tile_size %> fg-white" data-role="tile"><div class="tile-content slide-up-2">
+        <% const metro2013cfg = { ...config.metro2013.page_metro2013_default, ...metro2013 }; %>
+        <a href="<%= path %>" class="fg-white"><div class="<%- metro2013cfg.tile_size %> fg-white" data-role="tile"><div class="tile-content <%- description?"slide-right-2":'zooming' %>">
 
-              <div class="slide" >
-                <% if(metro2013cfg.tile_image !== null){ %>
-                  <div class="image-container"><div class="frame"><img src="<%- path %>background.webp"></div></div>
-                <% }else{ %>
-                  <div class="image-container"><div class="frame <%- metro2013cfg.tile_color %>"></div></div>
-                <% } %>
-              </div>
+          <% if(metro2013cfg.tile_image !== null){ %>
+            <div class="slide" ><div class="image-container"><div class="frame"><img src=" <%- (metro2013cfg.tile_image.includes("://") ? '' : path) + metro2013cfg.tile_image %> "></div></div></div>
+            <% }else{ %>
+              <div class="slide" ><div class="image-container"><div class="frame <%- metro2013cfg.tile_color %>"></div></div></div>
+            <% } %>
 
-              <div class="slide-over <%- metro2013cfg.tile_color %>">
-                <p><%- description %> </p>
-                <% tags.each((tag) => { %>
-                  <span><%= tag.name %></span>
-                <% }); %>
-              </div>
+          <% if(description){ %>
+          <div class="slide-over <%- metro2013cfg.tile_color %>">
+            <p><%= description %> </p>
+          </div>
+          <% } %>
 
-              <div class="tile-label"><%= title%></div>
-              
-            </div></div>
-
-        </a>
+          <div class="tile-label" style="pointer-events:none;"><h4><%= title%></h4></div>
+          
+        </div></div></a>
       <% }) %>
         
     </main>
