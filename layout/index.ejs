@@ -1,4 +1,4 @@
-<body class="container bg-darkCobalt fg-white" >
+<body class="container bg-winblue fg-white" >
     <%- include("_partial/header.ejs") %>
 
     <main>
@@ -8,13 +8,13 @@
         <a href="<%= path %>" class="fg-white"><div class="<%- metro2013cfg.tile_size %> fg-white" data-role="tile"><div class="tile-content <%- description?"slide-right-2":'zooming' %>">
 
           <% if(metro2013cfg.tile_image !== null){ %>
-            <div class="slide" ><div class="image-container"><div class="frame"><img src=" <%- (metro2013cfg.tile_image.includes("://") ? '' : path) + metro2013cfg.tile_image %> "></div></div></div>
+            <div class="slide" ><div class="image-container"><div class="frame"><img src=" <%- (metro2013cfg.tile_image.includes("://") ? '' : path) + metro2013cfg.tile_image %> "/></div></div></div>
             <% }else{ %>
               <div class="slide" ><div class="image-container"><div class="frame <%- metro2013cfg.tile_color %>"></div></div></div>
             <% } %>
 
           <% if(description){ %>
-          <div class="slide-over <%- metro2013cfg.tile_color %>">
+          <div class="slide-over padding10 <%- metro2013cfg.tile_color %>">
             <p><%= description %> </p>
           </div>
           <% } %>

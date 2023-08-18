@@ -1,7 +1,28 @@
-<body class="container bg-darkCobalt fg-white" >
-    <%- include("_partial/header.ejs") %>
+<body class="bg-white fg-black" >
+    <div class="bg-winblue" style="width: 100%; height: 140px; padding: 29px 42px 15px 40px;">
+        <header class="margin20 no-margin-left user-select-none clear-float">
+        
+            <% // 菜单 %>
+            <nav class="main-menu-wrapper clear-float"><ul class="horizontal-menu place-left">
+                
+                <% // 标题 %>
+                <li>  <a class="place-left fg-white padding-0" href="/" >  <h1 style="font-size: 54px;"> <span class="mif-arrow-left" style="border: .1em solid;border-radius: 50%;padding: 0.1em; font-size: .4em;vertical-align: .3em;"></span> <%- config.title %> </h1></a></li>
+        
+                <% //导航 %>
+                <% for(const nav of config.metro2013.nav) { %>
+                  <li><a style="font-size: 24px; color: #9db5ca; margin-top: 32%;" href="<%- nav.url %>"><%- nav.name %></a></li>
+                <% } %>
+        
+                <% // 头像 %>
+                <% if(config.metro2013.profile) {%>
+                    <li class="place-right fg-white" style=" padding-top: 1.7em;"> <span style="font-size: 23px; vertical-align: middle;"><%= config.metro2013.profile.name %></span> <img src="<%- config.metro2013.profile.avatar %>" style="width: 40px; height: 40px; margin-left: 10px;" > </li>
+                <% } %>
+            </ul></nav>
+        
+        </header>
+    </div>
 
-    <main class="glass-plate center-container">
+    <main class="center-container container">
         <article>
             <%- page.content %>
         </article>

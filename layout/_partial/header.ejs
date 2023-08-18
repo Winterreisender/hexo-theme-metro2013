@@ -1,17 +1,25 @@
 <header class="margin20 no-margin-left user-select-none clear-float">
-    <% // 标题 %>
-    <a class="place-left fg-white" href="/" title=""><h1> <%- config.title %> </h1></a>
+
 
     <% // 公告或副标题 %>
     <% config.metro2013.notice.forEach( ({content}) => {%>
         <div class="place-right"><%- content %></div>
     <% }) %>
-    
-    
+
     <% // 菜单 %>
-    <nav class="main-menu-wrapper place-left" style="padding-top: 1em; margin-left: 1em;"><ul class="horizontal-menu">
+    <nav class="main-menu-wrapper clear-float"><ul class="horizontal-menu place-left">
+
+        <% // 标题 %>
+        <li><a class="place-left fg-white padding-0" href="/" ><h1 style="font-size: 54px;"> <%- config.title %> </h1></a></li>
+
+        <% //导航 %>
         <% for(const nav of config.metro2013.nav) { %>
-          <li><a class="fg-white" href="<%- nav.url %>"><%- nav.name %></a></li>
+          <li><a style="font-size: 24px; color: #9db5ca; margin-top: 32%;" href="<%- nav.url %>"><%- nav.name %></a></li>
+        <% } %>
+
+        <% // 头像 %>
+        <% if(config.metro2013.profile) {%>
+            <li class="place-right fg-white" style=" padding-top: 1.7em;"> <span style="font-size: 23px; vertical-align: middle;"><%= config.metro2013.profile.name %></span> <img src="<%- config.metro2013.profile.avatar %>" style="width: 40px; height: 40px; margin-left: 10px;" > </li>
         <% } %>
     </ul></nav>
 

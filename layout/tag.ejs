@@ -1,11 +1,20 @@
-<body class="container bg-darkCobalt fg-white" >
+<body class="container bg-winblue fg-white user-select-none" >
     <%- include("_partial/header.ejs") %>
 
     <main class="glass-plate center-container">
-        <h2><%- page.tag %></h2>
-        <ul>
+        <h3><a href="/tags/<%- page.tag %>" style="color: #b0daff" ><%- page.tag %></a></h3>
+
+        <ul class="no-margin-left no-padding-left">
         <% site.posts.sort('date', -1).filter( post=> post.tags.data.map(x=>x.name).includes(page.tag) ).forEach( post=> { %>
-            <li> <a href="<%= config.root %><%= post.path %>"><%- post.title %></a> </li>
+            <li class="winmenuitem">
+                <% const metro2013cfg = { ...config.metro2013.page_metro2013_default, ...post.metro2013 }; %>
+                <% if(metro2013cfg.tile_image !== null){ %>
+                    <img src=" <%- (metro2013cfg.tile_image.includes("://") ? '' : ('/'+post.path) ) + metro2013cfg.tile_image %>" />
+                <% }else{ %>
+                    <img src="<%- config.metro2013.profile.avatar %>" />
+                <% } %>
+                <a href="<%= config.root %><%= post.path %>" class="fg-white"><%- post.title %></a> 
+            </li>
         <%  }); %>
         </ul>
     </main>
