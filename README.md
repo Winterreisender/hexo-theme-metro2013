@@ -13,6 +13,10 @@ A Metro style hexo theme. It's experimental now.
 - [ ] Documents: Limitions, i18n, screenshots
 - [ ] Pass [Hexo theme test](https://github.com/hexojs/hexo-theme-unit-test), fix warnings
 
+# Disclaimer
+
+This project is not affiliated with Microsoft. 
+
 # Credits
 
 [Metro-UI-CSS-3](https://github.com/olton-archive/Metro-UI-CSS-3) by olton, [MIT License](https://github.com/olton-archive/Metro-UI-CSS-3/blob/master/LICENSE)
@@ -20,8 +24,6 @@ A Metro style hexo theme. It's experimental now.
 [jquery](https://github.com/jquery/jquery) by [jquery authors](https://github.com/jquery/jquery/graphs/contributors), [MIT License](https://github.com/jquery/jquery/blob/main/LICENSE.txt)
 
 # License
-
-AGPL-3.0-only
 
 ```text
 This program is free software: you can redistribute it and/or modify it under the terms of
