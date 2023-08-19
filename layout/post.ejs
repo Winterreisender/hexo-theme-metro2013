@@ -22,15 +22,20 @@
             <%- page.content %>
         </article>
         
-        <% if(page.tags) {%>
-        <nav class="tag">
-            标签:
-            <% page.tags.data.map(x=>x.name).forEach( (tag, i, array)=> { %>
-                <a href="/tags/<%= tag %>"><%- tag %></a>
-                <%= i!==(array.length-1) ? '|' : '' %>
-            <% }) %>
+        <nav class="tags">
+            <% if(page.tags.data.length > 0) {%>
+                标签:
+                <% page.tags.data.map(x=>x.name).forEach( (tag, i, array)=> { %>
+                    <a href="/tags/<%= tag %>"><%- tag %></a>
+                    <%= i!==(array.length-1) ? '|' : '' %>
+                <% }) %>
+            <% } %>
+
+            <span>发布于: <time class="published" datetime="<%= page.date.toDate().toISOString() %>"><%= page.date.format(config.date_format) %></time></span>
+            <% if(page.updated.format(config.date_format) !== page.date.format(config.date_format)) {%>
+                <span> 更新于: <time class="updated" datetime="<%= page.updated.toDate().toISOString() %>"><%= page.date.format(config.date_format) %></time> </span>
+            <% } %>
         </nav>
-        <% } %>
     </main>
 
 </body>
