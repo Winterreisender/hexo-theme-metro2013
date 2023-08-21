@@ -19,9 +19,14 @@
         
         <nav class="tags">
             <% if(page.tags.data.length > 0) {%>
-                <%= __('tag') %>:
+                <%= __('tags') %>:
                 <% page.tags.data.map(x=>x.name).forEach( (tag, i, array)=> { %>
                     <a href="/tags/<%= tag %>"><%- tag %></a>
+                    <%= i!==(array.length-1) ? '|' : '' %>
+                <% }) %>
+                
+                <% page.categories.data.map(x=>x.name).forEach( (category, i, array)=> { %>
+                    <a href="/categories/<%= category %>"><%- category %></a>
                     <%= i!==(array.length-1) ? '|' : '' %>
                 <% }) %>
             <% } %>
