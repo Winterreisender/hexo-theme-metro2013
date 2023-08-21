@@ -1,0 +1,130 @@
+/* --------Global--------- */
+
+/*
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@font-face {
+
+}
+*/
+/* --------Atomic CSS--------- */
+
+.no-style,
+.no-style:hover {
+  all: unset;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
+
+.inline-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.1em;
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.bg-winblue {
+  background-color: #00529b !important;
+}
+
+.bg-winwhite{
+  background-color: #f2f2f2 !important;
+}
+
+.fg-winsmokeblue{
+  background-color: #b0daff  !important;
+}
+
+/* --------Element CSS--------- */
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+article {
+  line-height: 1.5em;
+}
+
+article h1, article h2, article h3, article h4 {
+  color: #b22121;
+}
+
+.back-icon {
+  width: 42px;
+  height: 42px;
+}
+
+.post-title{
+  font-size: 54px; 
+}
+
+.profile {
+  padding-top: 1.7em;
+}
+
+.profile-name {
+  font-size: 23px; 
+  vertical-align: middle;
+}
+
+.profile-avatar {
+  width: 40px; 
+  height: 40px; 
+  margin-left: 10px;
+}
+
+.post-header {
+  width: 100%;
+  height: 112px;
+  padding: 48px 42px 33px 40px;
+  margin-bottom: 25px;
+  
+}
+
+
+.winmenuitem {
+  width: 283px;
+  height: 46px;
+  list-style: none;
+
+  cursor: default;
+}
+
+.winmenuitem:hover {
+  background-color: #00acff;
+}
+
+.winmenuitem img {
+  margin: 3px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #225cb9;
+  box-sizing: content-box;
+
+}
+
+.winmenuitem a {
+  margin-left: 5px;
+  font-size: 14px;
+
+  cursor: default;
+}
