@@ -50,7 +50,7 @@ This is all hexo-theme-unit-test:
 
 ### Performance
 
-- [ ] _(Not Planed)_ Use [fragment_cache](https://hexo.io/docs/helpers.html#fragment_cache)
+- [ ] _(Not Planed)_ ~~Use [fragment_cache](https://hexo.io/docs/helpers.html#fragment_cache)~~
   It caches render result across post/pages, see [#1769](https://github.com/hexojs/hexo/issues/1769) for the impact
 
 ### Optional
@@ -59,7 +59,7 @@ This is all hexo-theme-unit-test:
 - [ ] i18n
 - [ ] Post share
 - [ ] SEO
-- [ ] _(Not Planed)_ RSS [Autodiscovery](https://www.rssboard.org/rss-autodiscovery) support
+- [ ] _(Not Planed)_ ~~RSS [Autodiscovery](https://www.rssboard.org/rss-autodiscovery) support~~
   * Example:
   ``` html
   <link rel="alternate" href="path/of/rss" type="application/atom+xml">
