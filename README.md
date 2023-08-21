@@ -66,9 +66,8 @@ This project is not affiliated with Microsoft.
 
 # Credits
 
-[Metro-UI-CSS-3](https://github.com/olton-archive/Metro-UI-CSS-3) by olton, [MIT License](https://github.com/olton-archive/Metro-UI-CSS-3/blob/master/LICENSE)
-[Atom One Light](https://github.com/highlightjs/highlight.js/blob/main/src/styles/atom-one-light.css) by Daniel Gamage, [BSD-3-Clause License](https://github.com/highlightjs/highlight.js/blob/main/LICENSE), Original One Light Syntax theme from https://github.com/atom/one-light-syntax
-[jquery](https://github.com/jquery/jquery) by [jquery authors](https://github.com/jquery/jquery/graphs/contributors), [MIT License](https://github.com/jquery/jquery/blob/main/LICENSE.txt)
+[Metro-UI-CSS-3](https://github.com/olton-archive/Metro-UI-CSS-3) by olton, [MIT License](https://github.com/olton-archive/Metro-UI-CSS-3/blob/master/LICENSE)  
+[Atom One Light](https://github.com/highlightjs/highlight.js/blob/main/src/styles/atom-one-light.css) by Daniel Gamage, [BSD-3-Clause License](https://github.com/highlightjs/highlight.js/blob/main/LICENSE), Original One Light Syntax theme from https://github.com/atom/one-light-syntax  
 
 # License
 
