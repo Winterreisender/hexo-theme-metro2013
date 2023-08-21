@@ -3,7 +3,7 @@
 
     <main>
     <% site.tags.data.forEach( tagObj => { %>
-        <h3><a href="/tags/<%- tagObj.name %>" style="color: #b0daff" ><%- tagObj.name %></a></h3>
+        <h3><a href="/tags/<%- tagObj.name %>" class="fg-winsmokeblue" ><%- tagObj.name %></a></h3>
         <ul class="no-margin-left no-padding-left">
         <% tagObj.posts.forEach( post=> { %>
             <% const metro2013cfg = { ...config.metro2013.page_metro2013_default, ...post.metro2013 }; %>

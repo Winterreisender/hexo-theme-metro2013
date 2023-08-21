@@ -2,7 +2,7 @@
     <%- include("_partial/header.ejs") %>
 
     <main class="glass-plate center-container">
-        <h3><a href="/tags/<%- page.tag %>" style="color: #b0daff" ><%- page.tag %></a></h3>
+        <h3><a href="/tags/<%- page.tag %>" class="fg-winsmokeblue" ><%- page.tag %></a></h3>
 
         <ul class="no-margin-left no-padding-left">
         <% site.posts.sort('date', -1).filter( post=> post.tags.data.map(x=>x.name).includes(page.tag) ).forEach( post=> { %>

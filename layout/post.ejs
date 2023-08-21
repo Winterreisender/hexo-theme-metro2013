@@ -1,21 +1,16 @@
 <body class="bg-winwhite fg-black" >
-    <div class="bg-winblue" style="width: 100%; height: 112px; padding: 28px 42px 33px 40px; margin-bottom: 25px;">
-        <header class="user-select-none clear-float">
-        
-            <% // 菜单 %>
-            <nav class="main-menu-wrapper clear-float"><ul class="horizontal-menu place-left">
-                
-                <% // 标题 %>
-                <li>  <a class="place-left fg-white padding-0" href="/" >  <h1 style="font-size: 54px; margin: 0;"> <span class="mif-arrow-left" style="border: 2px solid;border-radius: 50%;padding: 0.1em; font-size: 24px;vertical-align: .3em; margin-right: 16px;"></span> <%- config.title %> </h1></a></li>
-        
-                <% // 头像 %>
-                <% if(config.metro2013.profile) {%>
-                    <li class="place-right fg-white" style=" padding-top: 1.7em;"> <span style="font-size: 23px; vertical-align: middle;"><%= config.metro2013.profile.name %></span> <img src="<%- config.metro2013.profile.avatar %>" style="width: 40px; height: 40px; margin-left: 10px;" > </li>
-                <% } %>
-            </ul></nav>
-        
-        </header>
-    </div>
+    <header class="bg-winblue post-header user-select-none">
+        <% // 菜单 %>
+        <nav class="clear-float"><ul class="horizontal-menu place-left">
+            <% // 标题 %>
+            <li>  <a class="place-left fg-white padding-0" href="/" > <img src="/asset/icon/arrow.svg" class="back-icon"></img> <span class="post-title"> <%- config.title %> </h1></a></li>
+    
+            <% // 头像 %>
+            <% if(config.metro2013.profile) {%>
+                <li class="place-right fg-white"> <span class="profile-name"><%= config.metro2013.profile.name %></span> <img class="profile-avatar" src="<%- config.metro2013.profile.avatar %>"> </li>
+            <% } %>
+        </ul></nav>
+    </header>
 
     <main class="center-container container">
         <article>
@@ -24,16 +19,16 @@
         
         <nav class="tags">
             <% if(page.tags.data.length > 0) {%>
-                标签:
+                <%= __('tag') %>:
                 <% page.tags.data.map(x=>x.name).forEach( (tag, i, array)=> { %>
                     <a href="/tags/<%= tag %>"><%- tag %></a>
                     <%= i!==(array.length-1) ? '|' : '' %>
                 <% }) %>
             <% } %>
 
-            <span>发布于: <time class="published" datetime="<%= page.date.toDate().toISOString() %>"><%= page.date.format(config.date_format) %></time></span>
+            <span> <%= __('published_at') %>: <time class="published" datetime="<%= page.date.toDate().toISOString() %>"><%= page.date.format(config.date_format) %></time></span>
             <% if(page.updated.format(config.date_format) !== page.date.format(config.date_format)) {%>
-                <span> 更新于: <time class="updated" datetime="<%= page.updated.toDate().toISOString() %>"><%= page.date.format(config.date_format) %></time> </span>
+                <span> <%= __('updated_at') %>: <time class="updated" datetime="<%= page.updated.toDate().toISOString() %>"><%= page.date.format(config.date_format) %></time> </span>
             <% } %>
         </nav>
     </main>

@@ -19,7 +19,7 @@
 
         <% // 头像 %>
         <% if(config.metro2013.profile) {%>
-            <li class="place-right fg-white" style=" padding-top: 1.7em;"> <span style="font-size: 23px; vertical-align: middle;"><%= config.metro2013.profile.name %></span> <img src="<%- config.metro2013.profile.avatar %>" style="width: 40px; height: 40px; margin-left: 10px;" > </li>
+            <li class="place-right fg-white profile"> <span class="profile-name"><%= config.metro2013.profile.name %></span> <img class="profile-avatar" src="<%- config.metro2013.profile.avatar %>"> </li>
         <% } %>
     </ul></nav>
 
