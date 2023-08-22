@@ -1,0 +1,21 @@
+<main class="metro-groups-menu">
+    <% //参数 groups: tags或categories结构 %>
+    <% groups.data.forEach( group => { %>
+    <div class="group">
+        <h3 class="group-title"><a href="/tags/<%- group.name %>" class="fg-winsmokeblue" ><%- group.name %></a></h3>
+        <ul class="group-list no-margin-left no-padding-left">
+        <% group.posts.forEach( post=> { %>
+            <% const metro2013cfg = { ...config.metro2013.page_metro2013_default, ...post.metro2013 }; %>
+            <li class="group-list-item"> 
+                <% if(metro2013cfg.tile_image !== null){ %>
+                    <img src=" <%- (metro2013cfg.tile_image.includes("://") ? '' : post.path) + metro2013cfg.tile_image %>" />
+                <% }else{ %>
+                    <img src="<%- config.metro2013.profile.avatar %>" />
+                <% } %>
+                <a href="<%= config.root %><%= post.path %>" class="fg-white"> <%- post.title %> </a> 
+            </li>
+        <%  }); %>
+        </ul>
+    </div>
+    <% })  %>
+</main>

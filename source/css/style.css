@@ -11,11 +11,16 @@
 
 }
 */
-/* --------Atomic CSS--------- */
+/* --------Atomic--------- */
 
 .no-style,
 .no-style:hover {
   all: unset;
+}
+
+.scroll-x {
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 .margin-0 {
@@ -50,10 +55,10 @@
 }
 
 .fg-winsmokeblue{
-  background-color: #b0daff  !important;
+  color: #b0daff  !important;
 }
 
-/* --------Element CSS--------- */
+/* --------Element--------- */
 
 html, body{
   height: 100%;
@@ -100,8 +105,16 @@ article h1, article h2, article h3, article h4 {
   
 }
 
+/*----- Widgets -----*/
 
-.winmenuitem {
+.metro-groups-menu {
+  display: flex;
+  flex-flow: column wrap;
+  height: 90vh;
+  align-content: flex-start;
+}
+
+.metro-groups-menu .group-list-item {
   width: 283px;
   height: 46px;
   list-style: none;
@@ -109,11 +122,11 @@ article h1, article h2, article h3, article h4 {
   cursor: default;
 }
 
-.winmenuitem:hover {
+.metro-groups-menu .group-list-item:hover {
   background-color: #00acff;
 }
 
-.winmenuitem img {
+.metro-groups-menu .group-list-item img {
   margin: 3px;
   width: 38px;
   height: 38px;
@@ -122,7 +135,7 @@ article h1, article h2, article h3, article h4 {
 
 }
 
-.winmenuitem a {
+.metro-groups-menu .group-list-item a {
   margin-left: 5px;
   font-size: 14px;
 

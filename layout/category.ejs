@@ -1,0 +1,4 @@
+<body class="container bg-winblue fg-white user-select-none scroll-x" >
+    <%- include("_partial/header.ejs") %>
+    <%- include("_widget/metro-groups-menu.ejs", {groups:  site.categories.filter(group => group.name===page.category) }) %>
+</body>
